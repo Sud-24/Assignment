@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="	https://internshala.com/cached_uploads/logo%2F63eb3af05ba651676360432.jpg" type="image/x-icon">
+    <title>Jop Freak</title>
+  </head>
+
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img
+              src="	https://internshala.com/cached_uploads/logo%2F63eb3af05ba651676360432.jpg"
+              alt=""
+            />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">Sudheer Kumar</span>
+            <span class="profession">Web developer</span>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html" target="_self">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="contact.html" target="_self">
+                <i class="bx bxs-contact icon"></i>
+                <span class="text nav-text">Contact</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="information.html" target="_self">
+                <i class="bx bxs-error-circle icon"></i>
+                <span class="text nav-text">Information</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="Guide.html" target="_self">
+                <i class="bx bxs-book-open icon"></i>
+                <span class="text nav-text"> Guide</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section class="home">
+      <div class="text">
+        Information page
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, labore
+          natus. Sunt, eaque consectetur! Suscipit sit ex accusamus quasi
+          maiores recusandae et magni molestias omnis laborum, quos est dolorum
+          velit. Aspernatur aliquam explicabo cupiditate velit, voluptatum error
+          ipsa aliquid expedita beatae saepe quas animi quos ratione vero vitae
+          in cumque dignissimos dicta fuga? Obcaecati eum ducimus, expedita
+          reprehenderit magni eaque consequuntur voluptatum molestiae nisi natus
+          id quae exercitationem voluptatem consequatur suscipit laudantium
+          deserunt illo delectus corrupti consectetur. Hic unde alias sed
+          architecto! Accusantium laboriosam maiores, eaque repellat pariatur
+          error deleniti doloremque at? Consequatur dicta, quis alias sapiente
+          provident optio tempora.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const body = document.querySelector("body"),
+        sidebar = body.querySelector("nav"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+
+      modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          modeText.innerText = "Light mode";
+        } else {
+          modeText.innerText = "Dark mode";
+        }
+      });
+    </script>
+  </body>
+</html>
